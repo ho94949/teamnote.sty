@@ -4,7 +4,7 @@
 
 `teamnote.sty` is LaTeX template for making ACM-ICPC team reference document (a. k. a. team-note, team notebook, team cheat sheet, etc,.)
 
-##Feature
+## Feature
 
 Team reference document should meet following constraints:
 
@@ -24,19 +24,19 @@ Team reference document should meet following constraints:
 `teamnote.sty` have following commands:
 
 - `\teamnote{University Name}{School Name}{Author Name}`
-    It automatically configures document.
+    - It automatically configures document.
 - `\maketitlepage`
-    It makes title page with School Name, Author, Compiled Date, and Table of Contents
+    - It makes title page with School Name, Author, Compiled Date, and Table of Contents
 - `\Algorithm{Name}{Usage}{Complexity}{language}{source code file}{author}`
-    You can give an algorithm that will written in document. If you do not specify name, usage, (time) complexity, source code file or author, it will not be displayed. If you do not specify source code file, it 
+    - You can give an algorithm that will written in document. If you do not specify name, usage, (time) complexity, source code file or author, it will not be displayed. If you do not specify language, it will be cpp in default.
 - `\HideUsage`, `\ShowUsage`, `\HideComplexity`, `\ShowComplexity`, `\HideAuthor`, `\ShowAuthor`
-	Usage, time complexity, and author is showed or hidden after the command.
+  - Usage, time complexity, and author is showed or hidden after the command.
 
 
 
 ## Dependency
 
-`teamnote.sty` is $\LaTeX$ style file and depends on following packages:
+`teamnote.sty` is LaTeX style file and depends on following packages:
 
 - `geometry`
 
