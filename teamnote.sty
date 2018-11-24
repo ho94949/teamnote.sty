@@ -36,13 +36,12 @@
     \renewcommand{\authorname}{#3}
 }
 \pagestyle{fancy}
-\lhead{\schoolname{} -- \teamname}
+\lhead{\schoolname\ \teamname \authorname}
 \rhead{Page \thepage{} of
 \ifthenelse{\pageref{LastPage} < 26}{\pageref{LastPage}}{\textcolor{red}{\textbf{\pageref{LastPage}}}}}
 \fancyfoot{}
 
-\title{Team Note of \teamname}
-\author{\authorname}
+\title{Team Note of \schoolname \ \teamname}
 \date{Compiled on \today}
 
 
