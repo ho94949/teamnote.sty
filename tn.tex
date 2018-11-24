@@ -2,14 +2,13 @@
 % These codes should be guaranteed, fast enough, short and easy to type.
 
 \documentclass[landscape, 10pt, a4paper, oneside, twocolumn]{extarticle}
-\usepackage{kotex}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{import}
 
 \usepackage{teamnote}
 
-\teamnote{KAIST}{HYEA}{hyea}
+\teamnote{PetrSU}{QA}{Zovube}
 
 \ShowUsage
 \ShowComplexity
@@ -25,38 +24,34 @@
 
 \section{Graph}
 
-\Algorithm
-{Hopcroft-Karp Bipartite Matching}
-{Use \texttt{add\_edge} to add edges, \texttt{match} to get matching, \texttt{getcover} to calculate vertex cover.}
-{$\mathcal{O}(E \sqrt{V})$}
-{cpp}{source/BipartiteMatching.cpp}
-{koosaga}
+% \Algorithm
+% {Dinic}
+% {Use \texttt{add\_edge} to add edges, \texttt{match} to get matching, \texttt{getcover} to calculate vertex cover.}
+% {$\mathcal{O}(E \sqrt{V})$}
+% {cpp}{source/Dinic.cpp}
 
 
-\Algorithm
-{General Matching}
-{Use \texttt{init} to init, \texttt{addEdge} to add edges, \texttt{match} to get matching, \texttt{Match} to find maximum matching. Vertices have 1-based index.}
-{$\mathcal{O}(VE)$}
-{cpp}{source/GeneralMatching.cpp}
-{hyea}
+% \Algorithm
+% {General Matching}
+% {Use \texttt{init} to init, \texttt{addEdge} to add edges, \texttt{match} to get matching, \texttt{Match} to find maximum matching. Vertices have 1-based index.}
+% {$\mathcal{O}(VE)$}
+% {cpp}{source/GeneralMatching.cpp}
 
 \section{Data Structure}
 
-\Algorithm
-{Randomized Meldable Heap}
-{Min-heap \texttt{H} is declared as \texttt{Heap<T> H}. You can use \texttt{push}, \texttt{size}, \texttt{empty}, \texttt{top}, \texttt{pop} as \texttt{std::priority\_queue}. Use \texttt{H.meld(G)} to meld contents from \texttt{G} to \texttt{H}. }
-{$\mathcal{O}(log n)$}
-{cpp}{source/MeldableHeap.cpp}
-{hyea}
+% \Algorithm
+% {Randomized Meldable Heap}
+% {Min-heap \texttt{H} is declared as \texttt{Heap<T> H}. You can use \texttt{push}, \texttt{size}, \texttt{empty}, \texttt{top}, \texttt{pop} as \texttt{std::priority\_queue}. Use \texttt{H.meld(G)} to meld contents from \texttt{G} to \texttt{H}. }
+% {$\mathcal{O}(log n)$}
+% {cpp}{source/MeldableHeap.cpp}
 
-\section{Geometry}
+% \section{Geometry}
 
-\Algorithm
-{Smallest Enclosing Circle}
-{Use \texttt{solve} with \texttt{vector<Point>}. It returns \texttt{Circle c}, \texttt{c.p} is center, \texttt{c.r} is radius.}
-{$\mathcal{O}(n)$}
-{cpp}{source/SmallestEnclosingCircle.cpp}
-{hyea}
+% \Algorithm
+% {Smallest Enclosing Circle}
+% {Use \texttt{solve} with \texttt{vector<Point>}. It returns \texttt{Circle c}, \texttt{c.p} is center, \texttt{c.r} is radius.}
+% {$\mathcal{O}(n)$}
+% {cpp}{source/SmallestEnclosingCircle.cpp}
 
 
 \end{document}
