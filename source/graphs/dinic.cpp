@@ -1,15 +1,15 @@
 const int MAXE = 1e5, MAXV = 1e5;
 const ll INF_FLOW = INF;
 
-int edgeTo[MAXE], nextEdge[MAXE], E, edgeCap[MAXE];
+int edgeTo[MAXE], nextEdge[MAXE], E, edgeCap[MAXE], edgeCost[MAXE];
 int firstEdge[MAXV], firstEdgeTmp[MAXV], S, T;
 int myQueue[MAXN], qHead, qTail, vertexLevel[MAXV];
 
-void addEdge(int from, int to, ll cap) {
+void addEdge(int from, int to, ll cap, ll cs) {
 	edgeTo[E] = to,	nextEdge[E] = firstEdge[from];
-	edgeCap[E] = cap, firstEdge[from] = E++;
+	edgeCap[E] = cap, edgeCost[E] = cs, firstEdge[from] = E++;
 	edgeTo[E] = from, nextEdge[E] = firstEdge[to];
-	edgeCap[E] = 0, firstEdge[to] = E++;
+	edgeCap[E] = 0, edgeCost[E] = -cs, firstEdge[to] = E++;
 } 
 
 void init() { E = 0; fill(firstEdge, firstEdge + MAXV, -1); }
