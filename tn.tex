@@ -22,63 +22,94 @@
 % \pagebreak 
 
 
-\section{Graph}
+
+\section{Graphs}
 
 \Algorithm
 {Dinic}
 {Almost linear in practice. $\mathcal{O}(m \sqrt n)$ on unit network.}
 {$\mathcal{O}(n^{2}m)$}
-{cpp}{source/Dinic.cpp}
+{cpp}{source/graphs/dinic.cpp}
 
 \Algorithm
 {Mincost}
 {Complexity is strange but in practice works nice.}
 {$\mathcal{O}(something\ big,\ never\ reached\ in\ ACM\ tasks)$}
-{cpp}{source/Mincost.cpp}
+{cpp}{source/graphs/mincost.cpp}
 
 \Algorithm
-{Bridges and cut points}
+{Bridges and Cut points}
 {Works with multi edges but adds extra $ \log n$.}
 {$\mathcal{O}(n \log n)$}
-{cpp}{source/Bridges_cutpoints.cpp}
+{cpp}{source/graphs/bridges_and_cutpoints.cpp}
 
 \Algorithm
 {LCA with binary lifting}
 {Need to rind dfs and precalc binary liftings.}
 {$\mathcal{O}(\log n)$}
-{cpp}{source/LCA_wiki_conspects.cpp}
+{cpp}{source/graphs/lca_binary_lifting_wiki_conspects.cpp}
 
 \Algorithm
 {Kuhn with greedy heuristic}
 {Supposed to run faster than usual Kuhn.}
 {$\mathcal{O}(n^{3})$}
-{cpp}{source/Kuhn_with_greedy_heuristic.cpp}
+{cpp}{source/graphs/kuhn_with_greedy_heuristic.cpp}
 
+% TODO: weighted biparate matching
 % \Algorithm
 % {General Matching}
 % {Use \texttt{init} to init, \texttt{addEdge} to add edges, \texttt{match} to get matching, \texttt{Match} to find maximum matching. Vertices have 1-based index.}
 % {$\mathcal{O}(VE)$}
 % {cpp}{source/GeneralMatching.cpp}
 
-\section{Data Structure}
+
+
+
+\section{Data Structures}
 
 \Algorithm
-{Polynomial hashes}
-{Almost unbreakable.}
-{$\mathcal{O}(n), \mathcal{O}(1)$}
-{cpp}{source/Hashes.cpp}
+{Treap}
+{Implementation supports 2 kinds of operations: sum and reverse queries on $[l, r]$.}
+{Building $\mathcal{O}(n \log n)$, Query $\mathcal{O}(\log n)$}
+{cpp}{source/data_structures/treap.cpp}
 
 \Algorithm
 {Fenwick}
 {Considered to work in constant time in practice.}
 {$\mathcal{O}(\log n), \mathcal{O}(\log n)$}
-{cpp}{source/BIT.cpp}
+{cpp}{source/data_structures/fenwick.cpp}
 
 \Algorithm
 {Sparse table}
 {Not to fuck up.}
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
-{cpp}{source/ST.cpp}
+{cpp}{source/data_structures/sparse_table.cpp}
+
+
+
+
+\section{Strings}
+
+\Algorithm
+{Polynomial hashes}
+{Almost unbreakable.}
+{$\mathcal{O}(n), \mathcal{O}(1)$}
+{cpp}{source/strings/hashes.cpp}
+
+% TODO: Manaker
+% \Algorithm
+% {Aho-Pidarasik}
+% {Almost unbreakable.}
+% {$\mathcal{O}(n), \mathcal{O}(1)$}
+% {cpp}{source/strings/hashes.cpp}
+
+% TODO: Add aho-corasick
+% \Algorithm
+% {Aho-Pidarasik}
+% {Almost unbreakable.}
+% {$\mathcal{O}(n), \mathcal{O}(1)$}
+% {cpp}{source/strings/hashes.cpp}
+
 
 \section{Math}
 
@@ -86,22 +117,23 @@
 {Linear inverse modulo prime}
 {Suprisingly laconic.}
 {$\mathcal{O}(p)$}
-{cpp}{source/LinearInverse.cpp}
+{cpp}{source/math/linear_inverse.cpp}
 
 \Algorithm
 {FFT}
 {You never know, you never know...}
 {$\mathcal{O}(n \log n)$}
-{cpp}{source/FFT.cpp}
+{cpp}{source/math/fft.cpp}
 
 \Algorithm
 {Gauss}
 {Solves system of linear equations.}
 {$\mathcal{O}(n^{3})$}
-{cpp}{source/Gauss.cpp}
+{cpp}{source/math/gauss.cpp}
 
 
 
+% TODO: Serega, add your own shit here
 % \section{Geometry}
 
 % \Algorithm
@@ -112,7 +144,3 @@
 
 
 \end{document}
-
-
-
-
