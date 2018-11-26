@@ -36,6 +36,23 @@
 {$\mathcal{O}(something\ big,\ never\ reached\ in\ ACM\ tasks)$}
 {cpp}{source/Mincost.cpp}
 
+\Algorithm
+{Bridges and cut points}
+{Works with multi edges but adds extra $ \log n$.}
+{$\mathcal{O}(n \log n)$}
+{cpp}{source/Bridges_cutpoints.cpp}
+
+\Algorithm
+{LCA with binary lifting}
+{Need to rind dfs and precalc binary liftings.}
+{$\mathcal{O}(\log n)$}
+{cpp}{source/LCA_wiki_conspects.cpp}
+
+\Algorithm
+{Kuhn with greedy heuristic}
+{Supposed to run faster than usual Kuhn.}
+{$\mathcal{O}(n^{3})$}
+{cpp}{source/Kuhn_with_greedy_heuristic.cpp}
 
 % \Algorithm
 % {General Matching}
@@ -51,6 +68,17 @@
 {$\mathcal{O}(n), \mathcal{O}(1)$}
 {cpp}{source/Hashes.cpp}
 
+\Algorithm
+{Fenwick}
+{Considered to work in constant time in practice.}
+{$\mathcal{O}(\log n), \mathcal{O}(\log n)$}
+{cpp}{source/BIT.cpp}
+
+\Algorithm
+{Sparse table}
+{Not to fuck up.}
+{$\mathcal{O}(n \log n), \mathcal{O}(1)$}
+{cpp}{source/ST.cpp}
 
 \section{Math}
 
@@ -65,6 +93,13 @@
 {You never know, you never know...}
 {$\mathcal{O}(n \log n)$}
 {cpp}{source/FFT.cpp}
+
+\Algorithm
+{Gauss}
+{Solves system of linear equations.}
+{$\mathcal{O}(n^{3})$}
+{cpp}{source/Gauss.cpp}
+
 
 
 % \section{Geometry}
