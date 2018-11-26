@@ -22,13 +22,14 @@
 % \pagebreak 
 
 
-\section{Graph}
+
+\section{Graphs}
 
 \Algorithm
 {Dinic}
 {Almost linear in practice.}
 {$\mathcal{O}(n^{2}m)$}
-{cpp}{source/Dinic.cpp}
+{cpp}{source/graphs/dinic.cpp}
 
 % \Algorithm
 % {General Matching}
@@ -36,14 +37,44 @@
 % {$\mathcal{O}(VE)$}
 % {cpp}{source/GeneralMatching.cpp}
 
-\section{Data Structure}
+
+
+
+\section{Data Structures}
+
+\Algorithm
+{Treap}
+{Implementation supports 2 kinds of operations: sum and reverse queries on $[l, r]$.}
+{Building $\mathcal{O}(n \log n)$, Query $\mathcal{O}(\log n)$}
+{cpp}{source/data_structures/treap.cpp}
+
+
+
+
+\section{Strings}
 
 \Algorithm
 {Polynomial hashes}
 {Almost unbreakable.}
 {$\mathcal{O}(n), \mathcal{O}(1)$}
-{cpp}{source/Hashes.cpp}
+{cpp}{source/strings/hashes.cpp}
 
+% TODO: Manaker
+% \Algorithm
+% {Aho-Pidarasik}
+% {Almost unbreakable.}
+% {$\mathcal{O}(n), \mathcal{O}(1)$}
+% {cpp}{source/strings/hashes.cpp}
+
+% TODO: Add aho-corasick
+% \Algorithm
+% {Aho-Pidarasik}
+% {Almost unbreakable.}
+% {$\mathcal{O}(n), \mathcal{O}(1)$}
+% {cpp}{source/strings/hashes.cpp}
+
+
+% TODO: Serega, add your own shit here
 % \section{Geometry}
 
 % \Algorithm
@@ -54,7 +85,3 @@
 
 
 \end{document}
-
-
-
-
