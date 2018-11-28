@@ -85,6 +85,12 @@
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
 {cpp}{source/data_structures/sparse_table.cpp}
 
+\Algorithm
+{Next combination}
+{Gen C(N, K)}
+{$\mathcal{O}(C_{n}^{k})$}
+{cpp}{source/data_structures/next_combination.cpp}
+
 
 
 
@@ -131,10 +137,30 @@
 {$\mathcal{O}(n^{3})$}
 {cpp}{source/math/gauss.cpp}
 
+\Algorithm
+{Chineeze theorem find X}
+{Find x from ostatki.}
+{$\mathcal{O}(K^{2})$}
+{cpp}{source/math/chineeze_find_ans.cpp}
+
 
 
 % TODO: Serega, add your own shit here
-% \section{Geometry}
+\section{Geometry}
+
+\Algorithm
+{Theorema Pika}
+{$S = I + \frac{B}{2} - 1$, where $I$ - count of points strictly inside polygon, $B$ - count of points on boundary.}
+{Two circles intersection}
+{$A = -2 x_{2}$, $B = - 2 y_{2}$, $C = x_{2}^{2} + y_{2}^{2} + r_{1}^{2} - r_{2}^{2}$}
+{Distance on sphere}
+{$L = R \times cos^{-1}( sin(\phi_{a}) sin(-+ \phi_{b}) + cos(\phi_{a}) cos(-+ \phi_{b}) cos(\lambda_{a} -+ \lambda_{b}) ) $}
+
+\Algorithm
+{Minkovsky sum}
+{sort $V$ and $W$ by conterclockwise angle, leftmost downest first}
+{$\mathcal{O}(n + m)$}
+{cpp}{source/geometry/minkovsky.cpp}
 
 % \Algorithm
 % {Smallest Enclosing Circle}
