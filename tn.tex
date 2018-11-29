@@ -21,19 +21,25 @@
 % Make Pagebreak if you want.
 % \pagebreak 
 
-\section{Template}
+
+
+
+\section{Templates}
 
 \Algorithm
-{Template}
-{Ez win template: go to St. Petersburg, write template, solve problems, submit solutions, get OK, win NEERC}
+{C++ template}
+{Ez win template: go to St. Petersburg, write template, solve problems, submit solutions, get OK, win NEERC 2018}
 {$\mathcal{O}(1)$}
-{cpp}{source/tempate/template.cpp}
+{cpp}{source/templates/solution.cpp}
 
 \Algorithm
 {Stress test}
 {When you feel bad, you run this code and go walk with green badge, and get OK}
 {$\mathcal{O}(\infty)$}
-{cpp}{source/tempate/stress.cpp}
+{cpp}{source/templates/stress.cpp}
+
+
+
 
 \section{Graphs}
 
@@ -46,7 +52,7 @@
 \Algorithm
 {Mincost}
 {Complexity is strange but in practice works nice.}
-{$\mathcal{O}(something\ big,\ never\ reached\ in\ ACM\ tasks)$}
+{$\mathcal{O}(N * M) * T(N, M)$, where $T(N, M)$ – time complexity for SPFA(or any other shortest path algorithm) for graph with $N$ vertex and $E$ edges.}
 {cpp}{source/graphs/mincost.cpp}
 
 \Algorithm
@@ -58,7 +64,7 @@
 \Algorithm
 {LCA with binary lifting}
 {Need to rind dfs and precalc binary liftings.}
-{$\mathcal{O}(\log n)$}
+{Precalc – $\mathcal{O}(n \log n)$, Query – $\mathcal{O}(\log n)$}
 {cpp}{source/graphs/lca_binary_lifting_wiki_conspects.cpp}
 
 \Algorithm
@@ -82,7 +88,7 @@
 \Algorithm
 {Treap}
 {Implementation supports 2 kinds of operations: sum and reverse queries on $[l, r]$.}
-{Building $\mathcal{O}(n \log n)$, Query $\mathcal{O}(\log n)$}
+{Building – $\mathcal{O}(n \log n)$, Query – $\mathcal{O}(\log n)$}
 {cpp}{source/data_structures/treap.cpp}
 
 \Algorithm
@@ -97,12 +103,6 @@
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
 {cpp}{source/data_structures/sparse_table.cpp}
 
-\Algorithm
-{Next combination}
-{Gen C(N, K)}
-{$\mathcal{O}(C_{n}^{k})$}
-{cpp}{source/data_structures/next_combination.cpp}
-
 
 
 
@@ -114,12 +114,16 @@
 {$\mathcal{O}(n), \mathcal{O}(1)$}
 {cpp}{source/strings/hashes.cpp}
 
-% TODO: Manaker
-% \Algorithm
-% {Aho-Pidarasik}
-% {Almost unbreakable.}
-% {$\mathcal{O}(n), \mathcal{O}(1)$}
-% {cpp}{source/strings/hashes.cpp}
+\Algorithm
+{Manacher}
+{$p[0][i]$ – even case, let $len = p[0][i]$,
+it means that maximal even palindrome located on $[i - len, i + len - 1]$,
+
+$p[1][i]$ – even case, let $len = p[0][i]$,
+it means that maximal odd palindrome located on $[i - len, i + len]$
+}
+{$\mathcal{O}(n)$}
+{cpp}{source/strings/manacher.cpp}
 
 % TODO: Add aho-corasick
 % \Algorithm
@@ -127,6 +131,8 @@
 % {Almost unbreakable.}
 % {$\mathcal{O}(n), \mathcal{O}(1)$}
 % {cpp}{source/strings/hashes.cpp}
+
+
 
 
 \section{Math}
@@ -150,6 +156,12 @@
 {cpp}{source/math/gauss.cpp}
 
 \Algorithm
+{Next combination}
+{Gen C(N, K)}
+{$\mathcal{O}(C_{n}^{k})$}
+{cpp}{source/data_structures/next_combination.cpp}
+
+\Algorithm
 {Chineeze theorem find X}
 {Find x from ostatki.}
 {$\mathcal{O}(K^{2})$}
@@ -161,24 +173,34 @@
 \section{Geometry}
 
 \Algorithm
-{Theorema Pika}
+{Pick's Theorem}
 {$S = I + \frac{B}{2} - 1$, where $I$ - count of points strictly inside polygon, $B$ - count of points on boundary.}
+{}
+{cpp}{}
 
 \Algorithm
 {Two circles intersection}
-{$A = -2 x_{2}$, $B = - 2 y_{2}$, $C = x_{2}^{2} + y_{2}^{2} + r_{1}^{2} - r_{2}^{2}$}
+{$A = -2 x_{2}, B = - 2 y_{2}, C = x_{2}^{2} + y_{2}^{2} + r_{1}^{2} - r_{2}^{2}$}
+{}
+{cpp}{}
 
 \Algorithm
 {Distance on sphere}
 {$L = R \times cos^{-1}( sin(\phi_{a}) sin(-+ \phi_{b}) + cos(\phi_{a}) cos(-+ \phi_{b}) cos(\lambda_{a} -+ \lambda_{b}) ) $}
+{}
+{cpp}{}
 
 \Algorithm
 {Rotation matrix 2d}
 {$M = \left( \begin{smallmatrix} cos\theta & - sin\theta \\ sin\theta & cos\theta \end{smallmatrix} \right)$}
+{}
+{cpp}{}
 
 \Algorithm
 {Rotation matrix by axis}
 {$M = \left( \begin{smallmatrix} cos\theta + u_{x}^{2} (1 - cos\theta) \  & u_{x} u_{y} (1 - cos\theta) - u_{z} sin\theta \ & u_{x} u_{z} (1 - cos\theta) + u_{y} sin\theta \\ u_{y} u_{x} (1 - cos\theta) + u_{z} sin\theta \ & cos\theta + u_{y}^{2} (1 - cos\theta) \ & u_{y} u_{z} (1 - cos\theta) - u_{x} sin\theta \\ u_{z} u_{x} (1 - cos\theta) - u_{y} sin\theta \ & u_{z} u_{y} (1 - cos\theta) + u_{x} sin\theta \ & cos\theta + u_{z}^{2} (1 - cos\theta) \end{smallmatrix} \right)$}
+{}
+{cpp}{}
 
 \Algorithm
 {Minkovsky sum}
@@ -190,19 +212,20 @@
 {Half plane intersection}
 {Timon and Dimon never let it go}
 {$\mathcal{O}(n logn)$}
-{cpp}{source/geometry/half_plane.cpp}
+{cpp}{source/geometry/half_plane_intersection.cpp}
 
 \Algorithm
 {Closest pair}
 {Can be modificated to find triangle with min perimiter}
 {$\mathcal{O}(n logn)$}
-{cpp}{source/geometry/pair.cpp}
+{cpp}{source/geometry/closest_pair.cpp}
 
 % \Algorithm
 % {Smallest Enclosing Circle}
 % {Use \texttt{solve} with \texttt{vector<Point>}. It returns \texttt{Circle c}, \texttt{c.p} is center, \texttt{c.r} is radius.}
 % {$\mathcal{O}(n)$}
 % {cpp}{source/SmallestEnclosingCircle.cpp}
+
 
 
 \end{document}

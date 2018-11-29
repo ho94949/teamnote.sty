@@ -74,12 +74,7 @@ using vs = vector < string >;
 mt19937_64 rnd((unsigned long) chrono::high_resolution_clock::now().time_since_epoch().count());
 
 void solve() {
-    int x = 3;
-    vector<int> y = { x, x + 1, x + 2 };
-    debug(x);
-    debug(y);
-    debug(x == 3);
-    debug('?');
+    // write code here
 }
 
 int main() {
