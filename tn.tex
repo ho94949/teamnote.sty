@@ -100,11 +100,29 @@
 
 \Algorithm
 {Sparse table}
-{Not to fuck up.}
+{Not to fack up.}
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
 {cpp}{source/data_structures/sparse_table.cpp}
 
-
+\Algorithm
+{Centroid Decomposition}
+{Store something in centroids for example pair with distance to other vertices & etc.
+Properties:
+    \begin{enumerate}
+        \item Depth of the CD tree $ \leq \mathcal{O}(\log n)$.
+        \item Every vertex $v$ of the tree $t$ is centroid of some subtree of $t$.
+        \item Every vertex belongs to $\mathcal{O}(\log n)$ subtrees of $T$.
+        \item For any $u, v \in T (u \neq v)$ one of the following conditions is met:
+            \begin{itemize}
+                \item $T(v) \subset T(u)$
+                \item $T(u) \subset T(v)$
+                \item $T(u) \cap T(v) = \emptyset $
+            \end{itemize}
+        \item Simple path between every pair vertex $u, v$ has centroid $c \in T(t)$ such that $u, v \in T(c)$. 
+    \end{enumerate}
+}
+{$\mathcal{O}(n \log n), \mathcal{O}(1)$}
+{cpp}{source/data_structures/sparse_table.cpp}
 
 
 \section{Strings}

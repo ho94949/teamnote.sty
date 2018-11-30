@@ -233,3 +233,5 @@ TSWLatexianTemp*
 
 # End of https://www.gitignore.io/api/latex
 
+# ignore VS Code files
+.vscode
