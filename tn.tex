@@ -23,10 +23,6 @@
 % Make Pagebreak if you want.
 % \pagebreak 
 
-
-
-
-
 \section{Templates}
 
 \Algorithm
@@ -63,7 +59,7 @@
 
 \Algorithm
 {LCA with binary lifting}
-{Need to rind dfs and precalc binary liftings.}
+{Need to run dfs and precalc binary liftings.}
 {Precalc – $\mathcal{O}(n \log n)$, Query – $\mathcal{O}(\log n)$}
 {cpp}{source/graphs/lca_binary_lifting_wiki_conspects.cpp}
 
@@ -78,15 +74,6 @@
 {Kuznecov favorite algorith}
 {$\mathcal{O}(n^{3})$}
 {cpp}{source/graphs/weighted_biparate_matching.cpp}
-
-
-% TODO: weighted biparate matching
-% \Algorithm
-% {General Matching}
-% {Use \texttt{init} to init, \texttt{addEdge} to add edges, \texttt{match} to get matching, \texttt{Match} to find maximum matching. Vertices have 1-based index.}
-% {$\mathcal{O}(VE)$}
-% {cpp}{source/GeneralMatching.cpp}
-
 
 
 
@@ -129,6 +116,7 @@ Properties:
 }
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
 {cpp}{source/data_structures/sparse_table.cpp}
+
 
 
 \section{Strings}
@@ -237,6 +225,23 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 {$\mathcal{O}(Good\ log\ max(A, B))$}
 {cpp}{source/math/ext_gcd.cpp}
 
+% TODO: add formulae for power sums
+\Formula
+{Power sums}
+{
+    \begin{gather}
+        \sum_{k=1}^{n} k = \frac{n \times (n + 1)}{2} \\
+        \sum_{k=1}^{n} k^{2} = \frac{n \times (n + 1) \times (2 * n + 1)}{6} \\
+        \sum_{k=1}^{n} k^{3} = \frac{n^{2} \times (n + 1)^2}{4} \\
+        \sum_{k=1}^{n} k^{4} = \frac{n \times (n + 1) \times (3 * n^{2} + 3 * n - 1)}{30} \\
+        \sum_{k=1}^{n} k^{5} = \frac{n^{2} \times (n + 1)^{2} \times (2 * n^{2} + 2 * n - 1)}{12} \\
+        \sum_{k=1}^{n} k^{6} = \frac{n \times (n + 1) \times (2 * n + 1) \times (3 * n^{4} + 6 * n^{3} + 3 * n + 1)}{42} \\
+        \sum_{k=1}^{n} k^{7} = \frac{n^{2} \times (n + 1)^{2} \times (3 * n^{4} + 6 * n^{3} - n^{2} - 4 * n + 2)}{24}
+    \end{gather}
+}
+
+
+
 % TODO: Serega, add your own shit here
 \section{Geometry}
 
@@ -292,11 +297,5 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 {Can be modificated to find triangle with minimal perimiter}
 {$\mathcal{O}(n logn)$}
 {cpp}{source/geometry/closest_pair.cpp}
-
-% \Algorithm
-% {Smallest Enclosing Circle}
-% {Use \texttt{solve} with \texttt{vector<Point>}. It returns \texttt{Circle c}, \texttt{c.p} is center, \texttt{c.r} is radius.}
-% {$\mathcal{O}(n)$}
-% {cpp}{source/SmallestEnclosingCircle.cpp}
 
 \end{document}
