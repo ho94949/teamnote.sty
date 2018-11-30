@@ -5,6 +5,7 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{import}
+\usepackage{mathtools}
 
 \usepackage{teamnote}
 
@@ -168,9 +169,6 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 % {$\mathcal{O}(n), \mathcal{O}(1)$}
 % {cpp}{source/strings/hashes.cpp}
 
-
-
-
 \section{Math}
 
 \Algorithm
@@ -199,7 +197,7 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 
 \Algorithm
 {Chineeze theorem find X}
-{Find x from ostatki.}
+{Find x from reminders.}
 {$\mathcal{O}(K^{2})$}
 {cpp}{source/math/chineeze_find_ans.cpp}
 
@@ -236,39 +234,44 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 % TODO: Serega, add your own shit here
 \section{Geometry}
 
-\Algorithm
+\Formula
 {Pick's Theorem}
 {$S = I + \frac{B}{2} - 1$, where $I$ - count of points strictly inside polygon, $B$ - count of points on boundary.}
-{}
-{cpp}{}
 
-\Algorithm
+\Formula
 {Two circles intersection}
 {$A = -2 x_{2}, B = - 2 y_{2}, C = x_{2}^{2} + y_{2}^{2} + r_{1}^{2} - r_{2}^{2}$}
-{}
-{cpp}{}
 
-\Algorithm
+\Formula
 {Distance on sphere}
 {$L = R \times cos^{-1}( sin(\phi_{a}) sin(-+ \phi_{b}) + cos(\phi_{a}) cos(-+ \phi_{b}) cos(\lambda_{a} -+ \lambda_{b}) ) $}
-{}
-{cpp}{}
 
-\Algorithm
+\Formula
 {Rotation matrix 2d}
 {$M = \left( \begin{smallmatrix} cos\theta & - sin\theta \\ sin\theta & cos\theta \end{smallmatrix} \right)$}
-{}
-{cpp}{}
 
-\Algorithm
+\Formula
+{Sphere coordinates}
+{
+    $r = \sqrt{x^{2} + y^{2} + z^{2}}, \theta = arccos(\frac{z}{r}), \phi = \arctan(\frac{y}{x})$ \\
+    $x = r sin \theta cos \phi, y = r sin \theta \sin \phi, z = r cos \theta$ \\ 
+}    
+
+\Formula
 {Rotation matrix by axis}
-{$M = \left( \begin{smallmatrix} cos\theta + u_{x}^{2} (1 - cos\theta) \  & u_{x} u_{y} (1 - cos\theta) - u_{z} sin\theta \ & u_{x} u_{z} (1 - cos\theta) + u_{y} sin\theta \\ u_{y} u_{x} (1 - cos\theta) + u_{z} sin\theta \ & cos\theta + u_{y}^{2} (1 - cos\theta) \ & u_{y} u_{z} (1 - cos\theta) - u_{x} sin\theta \\ u_{z} u_{x} (1 - cos\theta) - u_{y} sin\theta \ & u_{z} u_{y} (1 - cos\theta) + u_{x} sin\theta \ & cos\theta + u_{z}^{2} (1 - cos\theta) \end{smallmatrix} \right)$}
-{}
-{cpp}{}
+{ $ M = 
+	\left ( 
+		\begin{smallmatrix} 
+			cos\theta + u_{x}^{2} (1 - cos\theta) \  & u_{x} u_{y} (1 - cos\theta) - u_{z} sin\theta \ & u_{x} u_{z} (1 - cos\theta) + u_{y} sin\theta \\ 
+			u_{y} u_{x} (1 - cos\theta) + u_{z} sin\theta \ & cos\theta + u_{y}^{2} (1 - cos\theta) \ & u_{y} u_{z} (1 - cos\theta) - u_{x} sin\theta \\ 
+			u_{z} u_{x} (1 - cos\theta) - u_{y} sin\theta \ & u_{z} u_{y} (1 - cos\theta) + u_{x} sin\theta \ & cos\theta + u_{z}^{2} (1 - cos\theta)
+		\end{smallmatrix} 
+	\right ) $
+}
 
 \Algorithm
 {Minkovsky sum}
-{sort $V$ and $W$ by conterclockwise angle, leftmost downest first}
+{Sort $V$ and $W$ by counterclockwise angle, leftmost bottommost first}
 {$\mathcal{O}(n + m)$}
 {cpp}{source/geometry/minkovsky.cpp}
 
@@ -280,7 +283,7 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 
 \Algorithm
 {Closest pair}
-{Can be modificated to find triangle with min perimiter}
+{Can be modificated to find triangle with minimal perimiter}
 {$\mathcal{O}(n logn)$}
 {cpp}{source/geometry/closest_pair.cpp}
 
@@ -289,7 +292,5 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 % {Use \texttt{solve} with \texttt{vector<Point>}. It returns \texttt{Circle c}, \texttt{c.p} is center, \texttt{c.r} is radius.}
 % {$\mathcal{O}(n)$}
 % {cpp}{source/SmallestEnclosingCircle.cpp}
-
-
 
 \end{document}

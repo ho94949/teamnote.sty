@@ -76,3 +76,10 @@
 	\ifthenelse{\equal{#5}{}}{}{\ifthenelse{\equal{#4}{}}{\inputminted[]{cpp}{#5}}{\inputminted[]{#4}{#5}}}
 }
 
+\newcommand{\Formula}[3]{
+	\subsection{#1}
+	
+	\ifthenelse{\equal{#2}{} \OR \boolean{BangShowUsage}}{}{\textbf{Description:} #2}
+	
+	\ifthenelse{\equal{#3}{} \OR \boolean{BangShowAuthor}}{}{\textbf{Author:} #3}
+}
