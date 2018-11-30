@@ -26,6 +26,7 @@
 
 
 
+
 \section{Templates}
 
 \Algorithm
@@ -39,9 +40,6 @@
 {When you feel bad, you run this code and go walk with green badge, and get OK}
 {$\mathcal{O}(\infty)$}
 {cpp}{source/templates/stress.cpp}
-
-
-
 
 \section{Graphs}
 
@@ -75,6 +73,13 @@
 {$\mathcal{O}(n^{3})$}
 {cpp}{source/graphs/kuhn_with_greedy_heuristic.cpp}
 
+\Algorithm
+{Weighted biparate matching}
+{Kuznecov favorite algorith}
+{$\mathcal{O}(n^{3})$}
+{cpp}{source/graphs/weighted_biparate_matching.cpp}
+
+
 % TODO: weighted biparate matching
 % \Algorithm
 % {General Matching}
@@ -101,11 +106,29 @@
 
 \Algorithm
 {Sparse table}
-{Not to fuck up.}
+{Not to fack up.}
 {$\mathcal{O}(n \log n), \mathcal{O}(1)$}
 {cpp}{source/data_structures/sparse_table.cpp}
 
-
+\Algorithm
+{Centroid Decomposition}
+{Store something in centroids for example pair with distance to other vertices & etc.
+Properties:
+    \begin{enumerate}
+        \item Depth of the CD tree $ \leq \mathcal{O}(\log n)$.
+        \item Every vertex $v$ of the tree $t$ is centroid of some subtree of $t$.
+        \item Every vertex belongs to $\mathcal{O}(\log n)$ subtrees of $T$.
+        \item For any $u, v \in T (u \neq v)$ one of the following conditions is met:
+            \begin{itemize}
+                \item $T(v) \subset T(u)$
+                \item $T(u) \subset T(v)$
+                \item $T(u) \cap T(v) = \emptyset $
+            \end{itemize}
+        \item Simple path between every pair vertex $u, v$ has centroid $c \in T(t)$ such that $u, v \in T(c)$. 
+    \end{enumerate}
+}
+{$\mathcal{O}(n \log n), \mathcal{O}(1)$}
+{cpp}{source/data_structures/sparse_table.cpp}
 
 
 \section{Strings}
@@ -178,6 +201,35 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
 {$\mathcal{O}(K^{2})$}
 {cpp}{source/math/chineeze_find_ans.cpp}
 
+\Algorithm
+{Calculating N! by prime P}
+{Find N!}
+{$\mathcal{O}(P log N)$}
+{cpp}{source/math/n_fact_by_prime.cpp}
+
+\Algorithm
+{Gray's code}
+{Numeric system with different between two adjansted numbers in 1 bit, ex: $000, 001, 011, 010, 110, 111, 101, 100$}
+{$\mathcal{O}(1)$}
+{cpp}{source/math/gray_code.cpp}
+
+\Algorithm
+{Euler function}
+{$\phi(n) = $ count of number in $1..n$, with $gcd(i, n) = 1$}
+{$\mathcal{O}(\sqrt{N})$}
+{cpp}{source/math/euler_f.cpp}
+
+\Algorithm
+{Eratosthene's Sieve}
+{you can calculate with blocks, remember}
+{$\mathcal{O}(N)$}
+{cpp}{source/math/eratosthenes_sieve.cpp}
+
+\Algorithm
+{Extended gcd}
+{Find $a x + b y = gcd(a, b)$}
+{$\mathcal{O}(Good\ log\ max(A, B))$}
+{cpp}{source/math/ext_gcd.cpp}
 
 % TODO: Serega, add your own shit here
 \section{Geometry}
@@ -205,17 +257,17 @@ it means that maximal odd palindrome located on $[i - len, i + len]$
     $x = r sin \theta cos \phi, y = r sin \theta \sin \phi, z = r cos \theta$ \\ 
 }    
 
-% \Formula
-% {Rotation matrix by axis}
-% { $ M = 
-% 	\left ( 
-% 		\begin{smallmatrix} 
-% 			cos\theta + u_{x}^{2} (1 - cos\theta) \  & u_{x} u_{y} (1 - cos\theta) - u_{z} sin\theta \ & u_{x} u_{z} (1 - cos\theta) + u_{y} sin\theta \\ 
-% 			u_{y} u_{x} (1 - cos\theta) + u_{z} sin\theta \ & cos\theta + u_{y}^{2} (1 - cos\theta) \ & u_{y} u_{z} (1 - cos\theta) - u_{x} sin\theta \\ 
-% 			u_{z} u_{x} (1 - cos\theta) - u_{y} sin\theta \ & u_{z} u_{y} (1 - cos\theta) + u_{x} sin\theta \ & cos\theta + u_{z}^{2} (1 - cos\theta)
-% 		\end{smallmatrix} 
-% 	\right ) $
-% }
+\Formula
+{Rotation matrix by axis}
+{ $ M = 
+	\left ( 
+		\begin{smallmatrix} 
+			cos\theta + u_{x}^{2} (1 - cos\theta) \  & u_{x} u_{y} (1 - cos\theta) - u_{z} sin\theta \ & u_{x} u_{z} (1 - cos\theta) + u_{y} sin\theta \\ 
+			u_{y} u_{x} (1 - cos\theta) + u_{z} sin\theta \ & cos\theta + u_{y}^{2} (1 - cos\theta) \ & u_{y} u_{z} (1 - cos\theta) - u_{x} sin\theta \\ 
+			u_{z} u_{x} (1 - cos\theta) - u_{y} sin\theta \ & u_{z} u_{y} (1 - cos\theta) + u_{x} sin\theta \ & cos\theta + u_{z}^{2} (1 - cos\theta)
+		\end{smallmatrix} 
+	\right ) $
+}
 
 \Algorithm
 {Minkovsky sum}
