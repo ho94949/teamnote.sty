@@ -1,23 +1,43 @@
 
 \ProvidesPackage{teamnote}
 
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,a4paper]{geometry}
+\usepackage[left=1cm,right=1cm,top=2cm,bottom=1cm,a4paper]{geometry}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{minted}
 \usepackage{color}
 \usepackage{indentfirst}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{import}
+\usepackage{caption}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage[T1]{fontenc} 
+\usepackage{setspace}
 
+\setstretch{1} % No line-spacing
+
+\renewcommand{\@listI}{% No spacing on list
+\leftmargin=25pt
+\rightmargin=0pt
+\labelsep=5pt
+\labelwidth=20pt
+\itemindent=0pt
+\listparindent=0pt
+\topsep=0pt plus 2pt minus 4pt
+\partopsep=0pt plus 1pt minus 1pt
+\parsep=0pt plus 1pt
+\itemsep=\parsep}
 
 \setlength{\columnseprule}{0.4pt}
 \pagenumbering{arabic}
-\setminted{breaklines=true, tabsize = 2, breaksymbolleft=}
+\setminted{breaklines=true, tabsize=2, breaksymbolleft=}
 \usemintedstyle{perldoc}
 
 \newcommand{\revised}{Should be \textcolor{red}{\textbf{revised}}.}
 \newcommand{\tested}{Should be \textcolor{red}{\textbf{tested}}.}
 \newcommand{\added}{Should be \textcolor{red}{\textbf{added}}.}
-\newcommand{\WIP}{\textcolor{red}{\textbf{WIP}}}
+\newcommand{\WIP}{\textcolor{red}{\textbf{Working in progress.}}}
 
 \newcommand{\schoolname}{Some University}
 \newcommand{\teamname}{Some Teamname}

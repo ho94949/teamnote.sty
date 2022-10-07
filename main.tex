@@ -1,0 +1,257 @@
+% Team Note Sample Template
+% These codes should be guaranteed, fast enough, short and easy to type.
+
+\documentclass[portrait, 8pt, a4paper, oneside, twocolumn]{extarticle}
+\usepackage{teamnote}
+
+% Uncomment below to use Korean
+% \usepackage{kotex}
+
+\teamnote{HYEA University}{HYEA Team}{hyea, teamnote, sty}
+
+\ShowUsage
+\ShowComplexity
+\HideAuthor
+
+\begin{document}
+
+\maketitlepage
+
+% Make Pagebreak if you want.
+% \pagebreak
+
+\section{Have you...}
+
+\subsection{tried...}
+
+\begin{itemize}
+    \item \textcolor{red}{\textbf{Reading the problem once more?}}
+    \item doubting ``obvious" things?
+    \item writing obivous things?
+    \item radical greedy approach?
+    \item thinking in reverse direction?
+    \item a greedy algorithm?
+    \item network flow when your greedy algorithms stuck?
+    \item a dynamic programming?
+    \item checking the range of answer?
+    \item random algorithm?
+    \item graph modeling using states?
+    \item inverting state only on odd indexes?
+    \item square root decomposition?
+    \item calculating error bound on a real number usage?
+\end{itemize}
+
+\subsection{checked...}
+
+\begin{itemize}
+    \item \textcolor{red}{\textbf{you have read the statement correctly?}}
+    \item typo copying the team note?
+    \item initialization on multiple test case problem?
+    \item additional information from the problem?
+    \item undefined behavior?
+    \item overflow?
+    \item function without return value?
+    \item real number error?
+    \item implicit conversion?
+    \item comparison between signed and unsigned integer?
+\end{itemize}
+
+\section{Data Structure}
+
+\tested
+
+\Algorithm{Bottom-up lazy segment tree}
+{Give monoid $(S, \cdot)$ and morphism $F: S \rightarrow S$ with $f(x \cdot y) = f(x) \cdot f(y)$
+\begin{itemize}
+    \item \texttt{S}: type of $S$, \texttt{S op(S a, S b)}: $a \cdot b$, \texttt{S e()}: identity element $e$
+    \item \texttt{F}: type of $F$, \texttt{S mapping(F f, S s)}: $f(s)$, \texttt{F composition(F f, F g)}: $f \circ g$, \texttt{F id()}: $id(x) = x$
+    \item \texttt{LazySeg(int n)}: $a_0 = \cdots = a_{N-1} = e$, \texttt{LazySeg(vector<S> v)}: Init array with \texttt{v}
+    \item \texttt{void set(int p, S x)}: $a_p = x$, \texttt{void apply(int l, int r, F f)}: $a_i = f(a_i)$ for $i=l, \cdots, r-1$.
+    \item \texttt{S prod(int l, int r)}: $a_l \cdot a_{l+1} \cdot \cdots \cdot a_{r-1}$, \texttt{S all\_prod()}: $a_0 \cdot \cdots \cdot a_{N-1}$
+\end{itemize}
+}
+{$\mathcal{O}(n)$ for constructor, $\mathcal{O}(\log n)$ for query}
+{cpp}{source/hyea/LazySegtree.cpp}
+{atcoder library}
+
+\tested
+
+
+\Algorithm
+{Randomized Meldable Heap}
+{Min-heap \texttt{H} is declared as \texttt{Heap<T> H}. You can use \texttt{push}, \texttt{size}, \texttt{empty}, \texttt{top}, \texttt{pop} as \texttt{std::priority\_queue}. Use \texttt{H.meld(G)} to meld contents from \texttt{G} to \texttt{H}. }
+{$\mathcal{O}(log n)$}
+{cpp}{source/hyea/MeldableHeap.cpp}
+{hyea}
+
+\subsection{Convex Hull Trick}
+
+\added
+
+\subsection{Li-Chao Tree}
+
+\added
+
+\subsection{Palindromic Tree}
+
+\added
+
+\subsection{Link-Cut Tree}
+
+\added
+
+\subsection{DSU rollback + Queue undo trick}
+
+
+
+\section{Math}
+
+\tested
+
+\subsection{Modint + Barrett Reduction}
+
+\added
+
+\Algorithm{Miller Rabin Primarily Test + Pollad Rho Factorization}
+{\texttt{is\_prime} For primarily test, \texttt{factor} for factorization $(n < 2^{62})$}
+{$\mathcal{O}(B\log n)$ ($B \sim 7$), $\mathcal{O}({n}^{1/4})$}
+{cpp}{source/hyea/Factorization.cpp}
+{hyea}
+
+\Algorithm{Linear Determinant}
+{\texttt{char\_poly} for $\det(xI-M)$, \texttt{det\_linear} for $\det(Ax+B)$}
+{$\mathcal{O}(n^3)$}
+{cpp}{source/hyea/LinearDeterminant.cpp}
+{hyea}
+
+\subsection{FFT, NTT, or, xor, and convolution}
+
+\added
+
+\subsection{Polynomial Library}
+
+\added
+
+\subsection{Simplex Algorithm}
+
+\added
+
+\subsection{Berlekamp-Massey Algorithm / Kitamasa}
+
+\added
+
+\subsection{Xudyh Sieve}
+
+\added
+
+\section{String Algorithm}
+
+\tested
+
+
+\Algorithm{Suffix Array with LCP}
+{\texttt{s}: string, \texttt{upper}: $\max$ \texttt{s}; e. g. 256 for ascii \texttt{string}. \texttt{sa}: pass suffix array together}
+{$\mathcal{O}(N+upper)$ for \texttt{SA}, $\mathcal{O}(N)$ for \texttt{lcp\_array}}
+{cpp}{source/hyea/SuffixArray.cpp}
+{atcoder library}
+
+\Algorithm{Z-algorithm}
+{$i$-th element is common prefix of $S$ and $S_{i \dots \lvert S \rvert}$}
+{$\mathcal{O}(N)$}
+{cpp}{source/hyea/Z.cpp}
+{hyea}
+
+\Algorithm{Manacher}
+{Returns palindromic radius of $S$. To calculate even length palindromes, insert \texttt{\$} between each character.}
+{$\mathcal{O}(N)$}
+{cpp}{source/hyea/Manacher.cpp}
+{hyea}
+
+
+\revised
+
+Support Incremental Aho-corasick
+
+\Algorithm{Aho-Corasick}
+{\texttt{MAXC}: size of alphabet, \texttt{F, FG}: failure (parent), failure graph, \texttt{ftrans}: state transition function.}
+{}
+{cpp}{source/hyea/AhoCorasick.cpp}
+{hyea}
+
+\section {Graph}
+
+\subsection{Dinic Algorithm}
+\added
+
+\subsection{Fast MCMF with slope clculation}
+\added
+
+\subsection{Global Min-cut}
+\added
+
+\subsection{Gomory-Hu Tree}
+\added
+
+\subsection{Perfect Elimination Ordering}
+\added
+
+
+
+\Algorithm
+{General Matching}
+{Use \texttt{init} to init, \texttt{addEdge} to add edges, \texttt{match} to get matching, \texttt{Match} to find maximum matching. Vertices have 1-based index.}
+{$\mathcal{O}(VE)$}
+{cpp}{source/hyea/GeneralMatching.cpp}
+{hyea}
+
+\Algorithm{Centroid Decomposition}
+{Fill in the function \texttt{work}.}
+{$\mathcal{O}(N \log N)$}
+{cpp}{source/hyea/CentroidDecomposition.cpp}
+{hyea}
+
+
+\subsection{SCC}
+\added
+
+\subsection{BCC, Cut vertex, Cut edge}
+
+\added
+
+
+\section{Geometry}
+
+\Algorithm
+{Smallest Enclosing Circle}
+{Use \texttt{solve} with \texttt{vector<Point>}. It returns \texttt{Circle c}, \texttt{c.p} is center, \texttt{c.r} is radius.}
+{$\mathcal{O}(n)$}
+{cpp}{source/hyea/SmallestEnclosingCircle.cpp}
+{hyea}
+
+\subsection{Voronoi Diagram + Delaneuy Triagulation}
+
+\added
+
+\section{Misc}
+
+\revised
+
+\WIP
+
+\Algorithm{(WIP) Magical Polynomial 3-SAT Algorithm}
+{Use this to solve all problems!}
+{$\mathcal{O}(n)$}
+{cpp}{source/empty.cpp}
+{hyea}
+
+\subsection{Policy-based Data structure}
+\added
+
+\subsection{Fast I/O}
+\added
+
+
+
+
+
+\end{document}

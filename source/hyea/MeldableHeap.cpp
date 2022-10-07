@@ -1,4 +1,3 @@
-namespace Meldable {
 mt19937 gen(0x94949);
 template<typename T>
 struct Node {
@@ -36,4 +35,3 @@ struct Heap {
 		r = Meld(r, x->r);
 	}
 };
-}

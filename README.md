@@ -4,6 +4,12 @@
 
 `teamnote.sty` is LaTeX template for making ACM-ICPC team reference document (a. k. a. team-note, team notebook, team cheat sheet, etc,.)
 
+## Usage
+
+Sample Project: https://www.overleaf.com/read/gvbsfchdbdhh
+
+Use Menu > Copy Project for your own team note.
+
 ## Feature
 
 Team reference document should meet following constraints:
